@@ -1,0 +1,6 @@
+Corrección aplicada:
+- Se agregó una capa fija .fixed-stadium-bg al body.
+- Se aplicó el fondo a body, html, .bg, .stadium-bg y otras clases posibles.
+- Se crearon copias de respaldo con otros nombres comunes.
+- Imagen principal: estadio_real_publico.jpg
+- Versión de caché: fondo-visible-final.

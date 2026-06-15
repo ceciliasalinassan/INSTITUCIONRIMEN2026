@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Admin · Ricardo Méndez</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Oswald:wght@400;500;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css?v=admin-independiente-1"><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@500;600;700;800;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="admin-body"><div class="bg"></div><main class="admin-main">
+<section id="loginPanel" class="login"><h1>Panel administrador</h1><p>Acceso privado. Ingresa la clave.</p><input id="adminPassword" type="password" placeholder="Clave de administrador"><button id="loginBtn">Ingresar</button></section>
+<section id="adminPanel" class="admin-panel hidden"><h1>Panel Administrador</h1><p id="statusLine" class="status">Estado: pendiente.</p>
+<div class="tabs">
+<button data-tab="supabase" class="active">Supabase</button><button data-tab="general">General</button><button data-tab="match">Próximo partido</button><button data-tab="history">Historia</button><button data-tab="directors">Directiva</button><button data-tab="presidents">Presidentes</button><button data-tab="results">Resultados</button><button data-tab="news">Noticias</button><button data-tab="gallery">Fotos/Videos</button><button data-tab="fixture">Fixture</button><button data-tab="standings">Puntajes</button><button data-tab="sponsors">Auspiciadores</button><button data-tab="backup">Respaldo</button>
+<button data-tab="tab-appearance">Apariencia</button></div>
+<div class="tab-content" id="tab-supabase"><h2>Conexión Supabase</h2><label>Project URL</label><input id="supabaseUrl" placeholder="https://xxxxx.supabase.co"><label>Publishable Key</label><input id="supabaseKey" placeholder="sb_publishable_..."><button id="saveSupabase">Guardar conexión Supabase</button><button id="loadCloud">Cargar datos desde Supabase</button><button id="saveCloud">Subir datos actuales a Supabase</button></div>
+<div class="tab-content hidden" id="tab-general"><h2>General</h2><label>Título portada</label><input id="homeTitle">
+<label>WhatsApp oficial</label><input id="siteWhatsapp" placeholder="569...">
+<label>Instagram URL</label><input id="siteInstagram" placeholder="https://instagram.com/...">
+<label>Facebook URL</label><input id="siteFacebook" placeholder="https://facebook.com/...">
+<label>Color principal</label><input id="siteColorBlue" placeholder="#00c8ff">
+<label>Color dorado</label><input id="siteColorGold" placeholder="#f7d36b"><label>Texto portada</label><textarea id="homeIntroInput"></textarea><label>Socios activos</label><input id="metricMembers"><label>Campeonatos</label><input id="metricTitles"><button id="saveGeneral">Guardar general</button></div>
+<div class="tab-content hidden" id="tab-match"><h2>Próximo partido</h2><input id="matchRival" placeholder="Rival">
+<input id="matchTournament" placeholder="Campeonato / Fecha">
+<input id="matchReferee" placeholder="Árbitro">
+<input id="matchBroadcast" placeholder="Transmisión / Link"><input id="matchDate" placeholder="Día y hora"><input id="matchPlace" placeholder="Lugar"><input id="matchLogoUrl" placeholder="URL logo rival"><input id="matchLogoFile" type="file" accept="image/*"><button id="saveMatch">Guardar partido</button></div>
+<div class="tab-content hidden" id="tab-history"><h2>Historia</h2><textarea id="historyText" placeholder="Historia del club"></textarea><input id="presidentName" placeholder="Presidente actual"><input id="historyPhoto" type="file" accept="image/*"><button id="saveHistory">Guardar historia</button></div>
+<div class="tab-content hidden" id="tab-directors"><h2>Directiva</h2><input id="directorRole" placeholder="Cargo"><input id="directorName" placeholder="Nombre"><button id="addDirector">Agregar</button><div id="directorsList"></div></div>
+<div class="tab-content hidden" id="tab-presidents"><h2>Presidentes</h2><input id="presidentGalleryName" placeholder="Nombre"><input id="presidentPeriod" placeholder="Periodo"><input id="presidentPhoto" type="file" accept="image/*"><button id="addPresident">Agregar presidente</button><div id="presidentsList"></div></div>
+<div class="tab-content hidden" id="tab-results"><h2>Resultados</h2><input id="resultDate" placeholder="Fecha"><input id="resultMatch" placeholder="Partido"><input id="resultScore" placeholder="Marcador"><button id="addResult">Agregar resultado</button><div id="resultsList"></div></div>
+<div class="tab-content hidden" id="tab-news"><h2>Noticias</h2><input id="newsTitle" placeholder="Título"><textarea id="newsText" placeholder="Texto"></textarea><input id="newsImage" type="file" accept="image/*"><button id="addNews">Agregar noticia</button><div id="newsList"></div></div>
+<div class="tab-content hidden" id="tab-gallery"><h2>Fotos / Videos</h2><input id="mediaTitle" placeholder="Título"><input id="mediaFile" type="file" accept="image/*,video/*"><input id="mediaUrl" placeholder="URL video o imagen"><button id="addMedia">Agregar</button><div id="galleryList"></div></div>
+<div class="tab-content hidden" id="tab-fixture"><h2>Fixture del club</h2><input id="fixtureTitle" placeholder="Título fecha"><input id="fixtureImage" type="file" accept="image/*"><button id="addFixture">Agregar imagen fixture</button><div id="fixtureList"></div></div>
+<div class="tab-content hidden" id="tab-standings"><h2>Puntajes por serie</h2><select id="standingSerie"></select><input id="teamName" placeholder="Equipo"><input id="pj" placeholder="J"><input id="pg" placeholder="G"><input id="pe" placeholder="E"><input id="pp" placeholder="P"><input id="gf" placeholder="GF"><input id="gc" placeholder="GC"><input id="pts" placeholder="PTS"><button id="addStanding">Agregar equipo</button><div id="standingsList"></div></div>
+<div class="tab-content hidden" id="tab-sponsors"><h2>Auspiciadores</h2><input id="sponsorName" placeholder="Nombre auspiciador"><input id="sponsorFile" type="file" accept="image/*"><input id="sponsorUrl" placeholder="URL logo"><button id="addSponsor">Agregar auspiciador</button><button id="loadOptimizedSponsors" type="button">Cargar auspiciadores optimizados</button><div id="sponsorsList"></div></div>
+<div class="tab-content hidden" id="tab-backup"><h2>Respaldo</h2><button id="exportBackup">Descargar respaldo JSON</button><input id="importBackup" type="file" accept="application/json"><button id="restoreCloudBackup" type="button">Restaurar respaldo local a Supabase</button></div>
+</section></main><script>window.CDRM_DEFAULT_SPONSORS=[{"name": "SAN PATRICIO MINIMARKET & BOTILLERÍA", "url": "sponsor_01.png"}, {"name": "GPS RUTA", "url": "sponsor_02.png"}, {"name": "RESTAURANT EL CARIBE", "url": "sponsor_03.png"}, {"name": "CONSTRUCTORA VENEGAS PRADENAS", "url": "sponsor_04.png"}, {"name": "CONSTRUCTORA BELTRÁN", "url": "sponsor_05.png"}, {"name": "FERRETERÍA PARRALITO", "url": "sponsor_06.png"}, {"name": "ARRIENDO DE MAQUINARIAS MENORES V&V SPA", "url": "sponsor_07.png"}, {"name": "DISTRIBUIDORA LA MAQUILA", "url": "sponsor_08.png"}, {"name": "RESTAURANT LA CASERITA", "url": "sponsor_09.png"}, {"name": "EL MAESTRO DE LA PARRILLA JUAN CRIOLLO", "url": "sponsor_10.png"}, {"name": "PEÑAFRUT", "url": "sponsor_11.png"}, {"name": "FUTBAR PITU", "url": "sponsor_12.png"}, {"name": "LA ESPIGA DE ORO", "url": "sponsor_13.png"}, {"name": "COMPLEJO EL CASTAÑO", "url": "sponsor_14.png"}, {"name": "CASCADAS DE ÑUBLE", "url": "sponsor_15.png"}, {"name": "MAOR", "url": "sponsor_16.png"}, {"name": "DON LUCHITO CECINAS", "url": "sponsor_17.png"}];window.CDRM_LOGO="logo_ricardo_mendez.png";</script>
+<section id="tab-appearance" class="tab-content hidden">
+  <h2>🏟️ Apariencia del sitio</h2>
+  <div class="admin-card">
+    <h3>Fondo principal</h3>
+    <p>Carga una imagen de estadio o fondo institucional. Se guardará en Supabase Storage / club-assets.</p>
+    <input id="backgroundUrl" placeholder="URL de fondo actual">
+    <input id="backgroundFile" type="file" accept="image/*">
+    <div id="backgroundPreview" class="background-preview-admin"></div>
+    <button id="saveBackground" type="button">Guardar fondo</button>
+    <button id="restoreBackground" type="button">Restaurar fondo predeterminado</button>
+  </div>
+  <div class="admin-card">
+    <h3>Colores corporativos</h3>
+    <label>Azul eléctrico</label>
+    <input id="appearanceBlue" type="color" value="#00c8ff">
+    <label>Dorado</label>
+    <input id="appearanceGold" type="color" value="#f7d36b">
+    <label>Oscurecimiento del fondo</label>
+    <input id="backgroundOverlay" type="range" min="0" max="80" value="35">
+    <span id="backgroundOverlayValue">35%</span>
+    <button id="saveAppearanceColors" type="button">Guardar colores</button>
+  </div>
+  <div class="admin-card">
+    <h3>Temas rápidos</h3>
+    <button class="themePreset" data-theme="adidas" type="button">Adidas Pro</button>
+    <button class="themePreset" data-theme="nike" type="button">Nike Elite</button>
+    <button class="themePreset" data-theme="classic" type="button">Ricardo Méndez Clásico</button>
+  </div>
+</section>
+
+<script src="admin.js?v=admin-independiente-1"></script>
+</body></html>

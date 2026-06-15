@@ -1,0 +1,14 @@
+IMPORTANTE PARA EVITAR PIXELADO
+
+Debes crear un bucket público en Supabase Storage:
+
+1. Entra a Supabase.
+2. Storage.
+3. New bucket.
+4. Nombre exacto: media
+5. Public bucket: activado.
+
+Luego, las imágenes de noticias, galería, fixture, presidentes, auspiciadores y logos se subirán como archivo original.
+Ya no se guardarán como Base64 ni se comprimirán con canvas.
+
+Si no creas el bucket media, el sistema avisará error al subir imágenes.

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1000">
+  <defs>
+    <radialGradient id="g" cx="55%" cy="50%" r="80%">
+      <stop offset="0%" stop-color="#245d20"/>
+      <stop offset="45%" stop-color="#123815"/>
+      <stop offset="100%" stop-color="#020307"/>
+    </radialGradient>
+    <linearGradient id="light" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#00bbff" stop-opacity=".8"/>
+      <stop offset="100%" stop-color="#d7aa31" stop-opacity=".45"/>
+    </linearGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="5"/></filter>
+  </defs>
+  <rect width="1800" height="1000" fill="url(#g)"/>
+  <g opacity=".23" stroke="#ffffff" stroke-width="4" fill="none">
+    <rect x="120" y="120" width="1560" height="760" rx="30"/>
+    <line x1="900" y1="120" x2="900" y2="880"/>
+    <circle cx="900" cy="500" r="135"/>
+    <rect x="120" y="310" width="260" height="380"/>
+    <rect x="1420" y="310" width="260" height="380"/>
+  </g>
+  <g opacity=".55" filter="url(#blur)">
+    <ellipse cx="930" cy="825" rx="540" ry="80" fill="#000000"/>
+  </g>
+  <g transform="translate(980 190) rotate(8)">
+    <circle cx="0" cy="55" r="52" fill="#0a0c11"/>
+    <path d="M-25 115 C-80 180 -95 260 -65 355 C-35 450 35 460 80 390 C125 320 125 210 55 125 Z" fill="#07090e"/>
+    <path d="M-15 140 C-95 210 -185 245 -270 230" stroke="#07090e" stroke-width="38" stroke-linecap="round"/>
+    <path d="M55 150 C140 205 220 220 310 195" stroke="#07090e" stroke-width="38" stroke-linecap="round"/>
+    <path d="M-30 352 C-110 455 -175 575 -260 705" stroke="#07090e" stroke-width="45" stroke-linecap="round"/>
+    <path d="M45 360 C95 500 160 605 250 720" stroke="#07090e" stroke-width="45" stroke-linecap="round"/>
+    <path d="M-260 705 C-305 735 -350 740 -385 710" stroke="#07090e" stroke-width="32" stroke-linecap="round"/>
+    <path d="M250 720 C310 740 350 725 385 690" stroke="#07090e" stroke-width="32" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(420 660)">
+    <circle cx="0" cy="0" r="88" fill="#f5f5f5"/>
+    <path d="M-55 -20 L-18 -55 L25 -42 L45 0 L20 45 L-30 42 L-58 10 Z" fill="#111"/>
+    <path d="M-15 -55 L-55 -80 M25 -42 L65 -65 M45 0 L83 15 M20 45 L35 82 M-30 42 L-70 67 M-58 10 L-85 -25" stroke="#111" stroke-width="8"/>
+  </g>
+  <g opacity=".75">
+    <path d="M0 250 C480 120 780 270 1200 135 C1450 60 1630 85 1800 40" stroke="url(#light)" stroke-width="7" fill="none"/>
+    <path d="M0 780 C360 720 760 920 1140 720 C1370 600 1540 650 1800 560" stroke="#00bbff" stroke-width="4" fill="none" opacity=".65"/>
+  </g>
+</svg>

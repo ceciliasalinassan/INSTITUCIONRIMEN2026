@@ -1,0 +1,11 @@
+Revisión final OK:
+- Rutas de /admin/index.html corregidas.
+- index.html OK.
+- admin.html OK.
+- app.js sin errores.
+- styles.css OK.
+- vercel.json OK.
+- supabase_setup.sql OK.
+- Parche de calidad de imágenes incluido.
+- Lightbox de fotos incluido.
+- Fix de auspiciadores incluido.

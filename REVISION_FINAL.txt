@@ -1,0 +1,22 @@
+REVISION ZIP MEJORADO VISUAL
+
+Estado:
+- index.html OK
+- admin.html OK
+- admin/index.html OK corregido
+- app.js OK sin errores de sintaxis
+- styles.css OK
+- vercel.json OK
+- supabase_setup.sql OK
+- assets locales OK
+
+Corrección aplicada:
+- Se corrigieron rutas en admin/index.html:
+  ..//styles.css -> ../styles.css
+  ..//app.js -> ../app.js
+
+Clave Admin:
+ADMINRIMEN1932
+
+Recomendación:
+Subir esta versión revisada al repositorio.

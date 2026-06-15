@@ -1,0 +1,6 @@
+Corrección aplicada:
+- Las fotos ya no se cortan: object-fit contain.
+- Las fotos quedan centradas y completas.
+- Al pinchar cualquier foto se abre ampliada en pantalla completa.
+- Se puede cerrar con X, clic fuera o tecla ESC.
+- Aplica a galería, noticias, presidentes y fixture.

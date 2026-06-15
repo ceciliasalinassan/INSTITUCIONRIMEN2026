@@ -1,0 +1,15 @@
+Revisión PRO 2026 OK
+
+Correcciones aplicadas:
+- Se corrigió /admin/index.html: ahora carga /styles.css y /app.js correctamente.
+- Se agregó lista de auspiciadores por defecto a index.html.
+- Se mantuvo fondo estadio_real_publico.jpg.
+- app.js validado con node --check.
+- vercel.json revisado.
+- Supabase setup incluido.
+- Clave Admin: ADMINRIMEN1932.
+
+Rutas de prueba en Vercel:
+- /
+- /admin.html
+- /admin/

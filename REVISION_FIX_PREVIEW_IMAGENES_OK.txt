@@ -1,0 +1,8 @@
+Corrección final aplicada:
+- Noticias ahora tienen vista previa ordenada de 420px.
+- Galería/fotos tienen vista previa ordenada de 300px.
+- La imagen no se agranda gigante en la página.
+- No se corta: object-fit contain.
+- No se aplican filtros ni suavizados.
+- Al pinchar se abre la imagen completa en pantalla completa.
+- Cierre con X, clic fuera o ESC.

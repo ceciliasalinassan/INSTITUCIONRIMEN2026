@@ -1,0 +1,11 @@
+Revisión final OK:
+- Estructura completa.
+- index.html OK.
+- admin.html OK.
+- /admin/ corregido con rutas relativas.
+- app.js sin errores de sintaxis.
+- styles.css OK.
+- vercel.json OK.
+- supabase_setup.sql incluido.
+- estadio_real_publico.jpg incluido.
+- Clave Admin configurada en app.js: ADMINRIMEN1932.

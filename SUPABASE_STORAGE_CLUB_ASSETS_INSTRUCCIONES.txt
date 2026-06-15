@@ -1,0 +1,11 @@
+IMPORTANTE
+
+Esta versión ya NO usa media/MEDIA.
+Usa solamente el bucket:
+
+club-assets
+
+Debe estar PUBLIC.
+Debe tener políticas SELECT, INSERT, UPDATE y DELETE.
+
+Si ya aparece como PUBLIC en Supabase Storage, solo asegúrate de tener políticas.

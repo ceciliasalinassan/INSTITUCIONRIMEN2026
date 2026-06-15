@@ -1,0 +1,7 @@
+Corrección aplicada:
+- Las imágenes de noticias/galería/fixture ya no se comprimen agresivamente.
+- Si pesan menos de 8MB, se suben en calidad original.
+- Si pesan más de 8MB, se reducen a máximo 2200px con calidad 96%.
+- Se eliminan filtros que podían oscurecer o suavizar el texto.
+- Flyers verticales se muestran completos y sin agrandarse de forma innecesaria.
+- Al hacer clic, se abren en pantalla completa usando la imagen original.

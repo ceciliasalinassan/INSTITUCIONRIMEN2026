@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Club Deportivo Ricardo Méndez</title>
+<meta name="description" content="Sitio oficial Club Deportivo Ricardo Méndez San Carlos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=admin-independiente-1">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<meta name="theme-color" content="#02050c">
+<meta property="og:title" content="Club Deportivo Ricardo Méndez">
+<meta property="og:description" content="Sitio oficial del Club Deportivo Ricardo Méndez de San Carlos.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="logo_ricardo_mendez.png">
+<link rel="manifest" href="manifest.json">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@500;600;700;800;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="ref-pro"><div class="fixed-stadium-bg"></div>
+<div class="stadium-bg"></div>
+<div class="stadium-effects"></div>
+
+<aside class="left-menu">
+  <div class="menu-logo"><img src="logo_ricardo_mendez.png" alt="Ricardo Méndez"></div>
+  <a class="active" href="#inicio"><span class="ico">⌂</span><b>Inicio</b></a>
+  <a href="#resultados"><span class="ico">♕</span><b>Resultados</b></a>
+  <a href="#posiciones"><span class="ico">▥</span><b>Posiciones</b></a>
+  <a href="#fixture"><span class="ico">▣</span><b>Fixture</b></a>
+  <a href="#noticias"><span class="ico">▤</span><b>Noticias</b></a>
+  <a href="#socios"><span class="ico">●</span><b>Socios</b></a>
+  <a href="#galeria"><span class="ico">▧</span><b>Galerías</b></a>
+  <a href="#historia"><span class="ico">◇</span><b>Historia</b></a>
+  <a href="#presidentes"><span class="ico">★</span><b>Presidentes</b></a>
+  <a href="#auspiciadores"><span class="ico">◆</span><b>Auspiciadores</b></a>
+  
+  <a class="member-box" target="_blank" href="https://wa.me/56994413797?text=Hola,%20quiero%20solicitar%20ser%20socio%20del%20Club%20Ricardo%20Méndez"><strong>Hazte socio</strong><small>Sé parte de nuestra familia</small></a>
+</aside>
+
+<main class="site">
+  <div class="social-top">
+    <a class="wa" target="_blank" href="https://wa.me/56994413797">☎</a>
+    <a class="ig" target="_blank" href="https://www.instagram.com/cd_ricardomendez_sancarlos">◎</a>
+    <a class="fb" target="_blank" href="https://www.facebook.com/RICARDOMENDEZSANCARLOS">f</a>
+  </div>
+
+  <section class="sponsor-ticker-section">
+    <div class="ticker-title">★ Auspiciadores oficiales ★</div>
+    <div class="ticker-shell">
+      <button type="button">‹</button>
+      <div id="sponsorTicker" class="sponsor-ticker"></div>
+      <button type="button">›</button>
+    </div>
+  </section>
+
+  <section id="inicio" class="hero">
+    <div class="hero-copy">
+      <div class="club-label">Club deportivo</div>
+      <h1>RICARDO MÉNDEZ</h1>
+      <h2>Más que un club, una familia.</h2>
+      <p id="homeIntro">Sitio oficial del Club Deportivo Ricardo Méndez de San Carlos. Noticias, socios, fixture, resultados, fotos, videos, auspiciadores e historia institucional.</p>
+      <div class="hero-actions">
+        <a class="btn gold" href="#resultados">🏆 Últimos resultados</a>
+        <a class="btn blue" href="https://wa.me/56994413797?text=Hola,%20quiero%20solicitar%20ser%20socio%20del%20Club%20Ricardo%20Méndez" target="_blank">👥 Hazte socio</a>
+      </div>
+    </div>
+
+    <div class="center-emblem">
+      <div class="emblem-ring"></div>
+      <img src="logo_ricardo_mendez.png" alt="Escudo Ricardo Méndez">
+    </div>
+
+    <aside id="nextMatchCard" class="match-card"></aside>
+  </section>
+
+  <section id="socios" class="metrics" id2="metrics">
+    <div id="metrics" class="metrics-inner"></div>
+  </section>
+
+  <section class="dual-home">
+    <div class="home-panel">
+      <div class="panel-head"><h3>Últimas noticias</h3><a href="#noticias">Ver todas</a></div>
+      <div id="homeNewsPreview" class="home-preview"></div>
+    </div>
+    <div class="home-panel">
+      <div class="panel-head"><h3>Galería destacada</h3><a href="#galeria">Ver más</a></div>
+      <div id="homeGalleryPreview" class="gallery-preview-mini"></div>
+    </div>
+  </section>
+
+  
+<section id="socios-formulario" class="section socios-form-section">
+  <div class="section-head"><h2>Solicitud de socio</h2><p>Completa tus datos para sumarte al Club Deportivo Ricardo Méndez.</p></div>
+  <form id="socioForm" class="socio-form">
+    <input id="socioNombre" placeholder="Nombre completo" required>
+    <input id="socioRut" placeholder="RUT">
+    <input id="socioTelefono" placeholder="Teléfono / WhatsApp" required>
+    <input id="socioCorreo" placeholder="Correo">
+    <select id="socioSerie"><option>Socio general</option><option>Serie adulta</option><option>Serie infantil</option><option>Serie femenina</option><option>Directiva</option></select>
+    <button type="submit">Enviar solicitud</button>
+  </form>
+</section>
+
+<section id="auspiciadores" class="section">
+    <div class="section-head"><h2>Auspiciadores oficiales</h2><p>Empresas y emprendimientos que apoyan al club.</p></div>
+    <div id="sponsorsGrid" class="sponsors-grid"></div>
+  </section>
+
+  <section id="resultados" class="section"><div class="section-head"><h2>Últimos resultados</h2><p>Resumen deportivo del club.</p></div><div id="resultsGrid" class="cards-grid"></div></section>
+  <section id="fixture" class="section"><div class="section-head"><h2>Fixture del club</h2><p>Imagen única por fecha.</p></div><div id="fixtureGrid" class="fixture-grid"></div></section>
+  <section id="posiciones" class="section"><div class="section-head"><h2>Tablas de posiciones</h2><select id="serieSelect"></select></div><div class="table-wrap"><table><thead><tr><th>Pos</th><th>Equipo</th><th>J</th><th>G</th><th>E</th><th>P</th><th>GF</th><th>GC</th><th>DG</th><th>PTS</th></tr></thead><tbody id="standingsRows"></tbody></table></div></section>
+  <section id="ranking" class="section"><div class="section-head"><h2>Tabla acumulada</h2><p>Puntos generales por club.</p></div><div class="table-wrap"><table><thead><tr><th>Pos</th><th>Equipo</th><th>J</th><th>PTS</th><th>DG</th></tr></thead><tbody id="cumulativeRows"></tbody></table></div></section>
+  <section id="noticias" class="section"><div class="section-head"><h2>Noticias</h2><p>Información oficial.</p></div><div id="newsGrid" class="news-grid"></div></section>
+  <section id="galeria" class="section"><div class="section-head"><h2>Fotos y videos</h2><p>Galería institucional.</p></div><div id="galleryGrid" class="gallery-grid"></div></section>
+  <section id="historia" class="section story"><div id="historyBox"></div></section>
+  <section id="presidentes" class="section"><div class="section-head"><h2>Galería de presidentes</h2><p>Historia dirigencial del club.</p></div><div id="presidentsGrid" class="presidents-grid"></div></section>
+
+  <footer class="footer">
+    <div>Pasión · Respeto · Unión · Trabajo · Familia</div>
+    <small>Club Deportivo Ricardo Méndez · San Carlos, Región de Ñuble, Chile</small>
+  </footer>
+</main>
+
+
+<script>window.CDRM_LOGO="logo_ricardo_mendez.png";</script>
+<script src="app.js?v=admin-independiente-1"></script>
+
+<div id="rmIaWidget" class="rm-ia-widget">
+  <button id="rmIaToggle" class="rm-ia-toggle" type="button">
+    <span>⚽</span>
+    <b>RM IA</b>
+  </button>
+  <div id="rmIaPanel" class="rm-ia-panel">
+    <div class="rm-ia-head">
+      <div class="rm-ia-avatar">RM</div>
+      <div>
+        <strong>RM IA</strong>
+        <small>Asistente del Club Ricardo Méndez</small>
+      </div>
+      <button id="rmIaClose" type="button">×</button>
+    </div>
+    <div id="rmIaMessages" class="rm-ia-messages">
+      <div class="rm-ia-msg bot">Hola 👋 Soy RM IA. Puedo ayudarte con próximo partido, noticias, fixture, historia, socios, resultados, tablas y auspiciadores.</div>
+    </div>
+    <div class="rm-ia-quick">
+      <button type="button" data-q="¿Cuándo juega Ricardo Méndez?">Próximo partido</button>
+      <button type="button" data-q="Muéstrame las últimas noticias">Noticias</button>
+      <button type="button" data-q="¿Cómo me hago socio?">Socios</button>
+    </div>
+    <form id="rmIaForm" class="rm-ia-form">
+      <input id="rmIaInput" placeholder="Escribe tu pregunta..." autocomplete="off">
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+</div>
+
+</body>
+</html>

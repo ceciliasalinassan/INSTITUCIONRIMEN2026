@@ -1,0 +1,17 @@
+IMPORTANTE:
+Esta versión sube las imágenes originales al bucket club-assets.
+
+No usa Base64.
+No usa canvas.
+No comprime a JPG.
+No reduce resolución.
+
+Requisitos en Supabase:
+- Bucket: club-assets
+- Debe ser PUBLIC
+- Políticas: SELECT, INSERT, UPDATE, DELETE
+
+Después del deploy:
+1. Ctrl + F5 en navegador.
+2. En Admin, carga una imagen nueva.
+3. Verifica en Supabase Storage > club-assets > news/gallery que el archivo esté ahí.

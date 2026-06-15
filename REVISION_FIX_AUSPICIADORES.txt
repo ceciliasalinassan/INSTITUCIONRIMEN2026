@@ -1,0 +1,7 @@
+Corrección aplicada SOLO a auspiciadores:
+- Se normalizan campos: url, logo, image, img, file, src, photo.
+- Se usa respaldo local si Supabase no trae URL de imagen.
+- Se corrige renderSponsors().
+- Se corrige renderSponsorTicker().
+- Se corrige CSS para no ocultar ni oscurecer logos.
+- Archivos de auspiciadores detectados: 35.

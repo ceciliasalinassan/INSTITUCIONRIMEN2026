@@ -1,0 +1,9 @@
+Correcciones aplicadas:
+- Página más compacta para verse completa.
+- Menú lateral reducido.
+- Carrusel de auspiciadores más bajo.
+- Logos con object-fit: contain para evitar deformación.
+- Escudo central más proporcionado.
+- Próximo partido más compacto y logos más visibles.
+- Botones Admin/Supabase alineados y dorados.
+- Título RICARDO MÉNDEZ lineal y más proporcionado.
