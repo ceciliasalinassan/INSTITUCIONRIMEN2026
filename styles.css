@@ -1547,3 +1547,46 @@ button:disabled{opacity:.65!important;cursor:wait!important}
 .admin-confirm-toast{position:fixed;right:22px;bottom:22px;z-index:999999;min-width:280px;max-width:420px;padding:15px 18px;border-radius:16px;color:#fff;box-shadow:0 14px 42px rgba(0,0,0,.45);transform:translateY(120px);opacity:0;transition:.25s ease;pointer-events:none}
 .admin-confirm-toast.show{transform:translateY(0);opacity:1}.admin-confirm-toast.success{background:linear-gradient(135deg,#00a86b,#00d084)}.admin-confirm-toast.error{background:linear-gradient(135deg,#b00020,#ff3b3b)}
 .list-item{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px;margin:8px 0;border-radius:12px;background:rgba(255,255,255,.06)}
+
+
+/* =========================================================
+   AUSPICIADORES PREMIUM SIN FONDO BLANCO
+========================================================= */
+.sponsor-card{
+  background:radial-gradient(circle at center,rgba(0,191,255,.10),transparent 62%),linear-gradient(145deg,rgba(2,8,18,.94),rgba(5,14,26,.86))!important;
+  border:1px solid rgba(0,191,255,.55)!important;
+  box-shadow:0 0 22px rgba(0,191,255,.13),inset 0 0 25px rgba(255,255,255,.035)!important;
+  overflow:hidden!important;
+}
+.sponsor-logo-box,.ticker-logo-box{
+  background:radial-gradient(circle at center,rgba(255,255,255,.08),transparent 58%),linear-gradient(145deg,rgba(0,0,0,.30),rgba(0,191,255,.06))!important;
+  border-radius:18px!important;
+  overflow:hidden!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+}
+.sponsor-logo-box{height:120px!important;padding:14px!important}
+.sponsor-img,.sponsor-logo-box img,.ticker-sponsor-img,.ticker-logo-box img{
+  max-width:100%!important;
+  max-height:100%!important;
+  width:auto!important;
+  height:auto!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  display:block!important;
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  filter:drop-shadow(0 0 8px rgba(0,191,255,.20)) contrast(1.08) saturate(1.08)!important;
+  mix-blend-mode:screen!important;
+}
+.sponsor-card h3{
+  color:#fff!important;
+  text-shadow:0 2px 9px rgba(0,0,0,.95),0 0 10px rgba(0,191,255,.28)!important;
+  font-weight:900!important;
+}
+.ticker-sponsor{background:rgba(0,0,0,.18)!important;border-radius:14px!important}
+.ticker-logo-box{width:70px!important;height:52px!important;padding:6px!important}
+.ticker-sponsor span{color:#fff!important;text-shadow:0 2px 8px rgba(0,0,0,.9)!important}
+.sponsor-fallback{background:transparent!important;color:#ffe18a!important;text-shadow:0 0 12px rgba(0,191,255,.32)!important}

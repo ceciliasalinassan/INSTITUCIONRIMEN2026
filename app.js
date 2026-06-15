@@ -707,3 +707,40 @@ document.addEventListener('DOMContentLoaded', ()=>{
     }
   }, 500);
 });
+
+
+/* =========================================================
+   FIX VISUAL AUSPICIADORES SIN FONDO BLANCO
+========================================================= */
+function sponsorImgPremium(url, name, cls='sponsor-img'){
+  if(!url) return `<div class="sponsor-fallback">${name || 'AUSPICIADOR'}</div>`;
+  return `<img class="${cls}" src="${url}" alt="${name || 'Auspiciador'}" loading="lazy">`;
+}
+if(typeof renderSponsors === 'function' && !window.__sponsorRenderPremium){
+  window.__sponsorRenderPremium = true;
+  const oldRenderSponsorsPremium = renderSponsors;
+  renderSponsors = function(d){
+    d = d || getData();
+    const el = document.getElementById('sponsorsGrid');
+    if(!el) return oldRenderSponsorsPremium(d);
+    const list = d.sponsors || [];
+    el.innerHTML = list.length
+      ? list.map(s=>`<article class="sponsor-card"><div class="sponsor-logo-box">${sponsorImgPremium(s.url, s.name, 'sponsor-img')}</div><h3>${s.name || ''}</h3></article>`).join('')
+      : `<div class="empty-state">Aún no hay auspiciadores cargados.</div>`;
+  }
+}
+if(typeof renderSponsorTicker === 'function' && !window.__tickerRenderPremium){
+  window.__tickerRenderPremium = true;
+  const oldTickerPremium = renderSponsorTicker;
+  renderSponsorTicker = function(d){
+    d = d || getData();
+    const el = document.getElementById('sponsorTicker');
+    if(!el) return oldTickerPremium(d);
+    const list = d.sponsors || [];
+    if(!list.length){
+      el.innerHTML = `<div class="ticker-empty">CARGA TUS AUSPICIADORES DESDE ADMIN</div>`;
+      return;
+    }
+    el.innerHTML = [...list,...list].map(s=>`<div class="ticker-sponsor"><div class="ticker-logo-box">${sponsorImgPremium(s.url, s.name, 'ticker-sponsor-img')}</div><span>${s.name || ''}</span></div>`).join('');
+  }
+}
